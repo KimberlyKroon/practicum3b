@@ -5,9 +5,12 @@ public class Main {
         try {
             c1 = new Cirkel(10, 0, 0);
             c2 = new Cirkel(0, 10, 10);
-        } catch (NullPointerException e) {
+        } catch (IllegalArgumentException iae) {
             System.out.println("Radius moet groter dan 0 zijn!");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
+
 
         System.out.println(c1);
         System.out.println(c2);

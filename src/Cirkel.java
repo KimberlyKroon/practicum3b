@@ -4,6 +4,9 @@ public class Cirkel {
     private int yPositie;
 
     public Cirkel(int rad, int x, int y){
+        if(rad < 1){
+            throw new IllegalArgumentException();
+        }
         radius = rad;
         xPositie = x;
         yPositie = y;
